@@ -1,0 +1,15 @@
+.left {
+	float: left;
+	width: 40%;
+}
+.right {
+	float: right;
+}
+#colorResult {
+	margin-left: 30px;
+}
+#colorResult > div:first-child {
+	height: 30px;
+	width: 100px;
+	border: 1px solid black;
+}
