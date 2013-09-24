@@ -13,3 +13,18 @@
 	width: 100px;
 	border: 1px solid black;
 }
+#valid-count{
+	font-weight: bold;
+	color: #008800;
+}
+#color-list{
+	margin-top: 5px;
+}
+#color-list > div {
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+	display: inline-block;
+}

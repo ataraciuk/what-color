@@ -52,7 +52,10 @@ WhatColor.parseAvg = function(arr) {
 		for(j = 0; j < 3; j++) {
 			tots[j]+= parseInt(e[j], 16);
 		}
+		WhatColor.COLORLISTPARENT.append('<div style="background-color:#'+e.join('')+'"></div>');
+
 	}
+	$('#valid-count').html(l);
 	if(l > 0) {
 		for(j = 0; j < 3; j++) {
 			tots[j] = Math.round(tots[j] / l).toString(16);
@@ -60,13 +63,14 @@ WhatColor.parseAvg = function(arr) {
 		}
 		var hexa = tots.join('');
 		$('#colorResult > div:first-child').css('background-color', '#'+hexa);
-		$('#colorResult > div:last-child').html(hexa);
+		$('#colorResult > div:nth-child(2)').html(hexa);
 	}
 }
 
 WhatColor.BASETEXT = 'Andres should wear ';
 WhatColor.BASELGTH = WhatColor.BASETEXT.length;
 WhatColor.HASHTAGS = ' #colortowear #socialhacking';
+WhatColor.COLORLISTPARENT = $('#color-list');
 
 document.addEventListener("DOMContentLoaded", function () {
 	WhatColor.init();
